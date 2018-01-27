@@ -2,6 +2,12 @@ package com.algorithms;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Sanveg
+ *
+ */
+
 public class NQueen {
 
 	class Position {

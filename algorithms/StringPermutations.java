@@ -8,8 +8,7 @@ import java.util.TreeMap;
 
 /**
  * 
- * @author Sanveg 
- * The algorithm finds all the permutations of a given string
+ * @author Sanveg
  *
  */
 
