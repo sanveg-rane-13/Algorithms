@@ -43,4 +43,8 @@ public class MathFunctions {
 			return greatestCommonDivisor(second % first, first);
 		}
 	}
+
+	public long leastCommonMultiple(long first, long second) {
+		return (first * second) / this.greatestCommonDivisor(first, second);
+	}
 }
