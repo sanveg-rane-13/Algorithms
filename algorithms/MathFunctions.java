@@ -15,11 +15,9 @@ import java.text.DecimalFormat;
 
 public class MathFunctions {
 
-	public static void main(String[] args) {
-	}
+	private final DecimalFormat formatDecimal = new DecimalFormat("0.000");
 
 	public double squareRoot(float number) {
-		DecimalFormat formatDecimal = new DecimalFormat("0.000");
 		double approx = 0.5 * number;
 		double better = 0.5 * (approx + number / approx);
 
@@ -28,6 +26,21 @@ public class MathFunctions {
 			better = 0.5 * (approx + number / approx);
 		}
 
-		return Double.parseDouble(formatDecimal.format(approx));
+		return Double.parseDouble(this.formatDecimal.format(approx));
+	}
+
+	public long greatestCommonDivisor(long first, long second) {
+
+		if (first > second) {
+			long temp = second;
+			second = first;
+			first = temp;
+		}
+
+		if (second % first == 0) {
+			return first;
+		} else {
+			return greatestCommonDivisor(second % first, first);
+		}
 	}
 }

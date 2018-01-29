@@ -9,7 +9,7 @@ import com.algorithms.MathFunctions;
 class TestMathFunctions {
 
 	@Test
-	void test() {
+	void testSquareRoot() {
 		MathFunctions mathFunctions = new MathFunctions();
 
 		float firstTest = 121;
@@ -26,6 +26,20 @@ class TestMathFunctions {
 		assertEquals(secondTestSolution, mathFunctions.squareRoot(secondTest));
 		assertEquals(thirdTestSolution, mathFunctions.squareRoot(thirdTest));
 		assertEquals(fourthTestSolution, mathFunctions.squareRoot(fourthTest));
+	}
+	
+	@Test
+	void testGCD() {
+		MathFunctions mathFunctions = new MathFunctions();
+		long firstTestSolution = 6;
+		long secondTestSolution = 2;
+		long thirdTestSolution = 11;
+		long fourthTestSolution = 50;
+		
+		assertEquals(firstTestSolution, mathFunctions.greatestCommonDivisor(84, 78));
+		assertEquals(secondTestSolution, mathFunctions.greatestCommonDivisor(1486, 894));
+		assertEquals(thirdTestSolution, mathFunctions.greatestCommonDivisor(121, 165));
+		assertEquals(fourthTestSolution, mathFunctions.greatestCommonDivisor(150, 100));
 	}
 
 }
